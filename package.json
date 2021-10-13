@@ -6,7 +6,7 @@
   "scripts": {
     "migrate": "npx prisma migrate dev --name init",
     "start": "node dist/server.js",
-    "build": "npx prisma generate NODE_PATH=./ npm i && tsc -d --outDir dist",
+    "build": "npx prisma generate NODE_PATH=./ yarn install && tsc -d --outDir dist",
     "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server.ts"
   },
   "dependencies": {
