@@ -5,13 +5,13 @@
   "license": "MIT",
   "scripts": {
     "migrate": "npx prisma migrate dev --name init",
-    "start":"node dist/server.js",
-
-    "build": "NODE_PATH=./ npm i && tsc -d --outDir dist",
+    "start": "node dist/server.js",
+    "build": "npx prisma generate NODE_PATH=./ npm i && tsc -d --outDir dist",
     "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server.ts"
   },
   "dependencies": {
     "@prisma/client": "^3.2.0",
+    "@types/graphql": "^14.5.0",
     "apollo-server": "^3.4.0",
     "class-validator": "^0.13.1",
     "graphql": "^15.6.1",
