@@ -74,7 +74,7 @@ function startServer() {
                             prisma: prisma,
                         };
                     };
-                    new apollo_server_1.ApolloServer({ schema: schema, context: context }).listen({ port: process.env.PORT || 5000 }, function () { return console.log("🚀 Server ready at: http://localhost:4000"); });
+                    new apollo_server_1.ApolloServer({ schema: schema, context: context }).listen({ port: process.env.PORT || 5000 }, function () { return console.log("🚀 Server ready at: http://localhost:5000"); });
                     return [2 /*return*/];
             }
         });
