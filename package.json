@@ -5,8 +5,8 @@
   "license": "MIT",
   "scripts": {
     "migrate": "npx prisma migrate dev --name init",
-    "start":"node dist/src/server.js",
-    "build": "NODE_PATH=./ npm i && tsc -d --outDir dist",
+    "start":"node dist/server.js",
+    "build": "npx prisma generate NODE_PATH=./ npm i && tsc -d --outDir dist",
     "dev": "ts-node-dev --no-notify --respawn --transpile-only src/server.ts"
   },
   "dependencies": {
